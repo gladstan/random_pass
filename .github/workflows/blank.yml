@@ -22,8 +22,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
-
+      - name: Install dependencies
+        run: pip install -r requirements.txt
       # Runs a set of commands using the runners shell
       - name: Run a single_line script
         run: random_pass/hello.py
